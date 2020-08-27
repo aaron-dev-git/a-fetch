@@ -37,7 +37,7 @@ fi
 
 PKGMAN=/etc/gentoo-release
 if [ -f "$PKGMAN" ]; then
-pkg=$pkg(ls /var/db/pkg/* | wc -l)
+pkg=$(ls /var/db/pkg/* | wc -l)
 echo 'Packages: '$pkg'(emerge)'
 fi
 
