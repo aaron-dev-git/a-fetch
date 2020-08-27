@@ -1,9 +1,8 @@
 # a-fetch
-Simple af fetcher tool for Debian based systems. (Will add support for more later.)
+Simple af fetcher tool for a large portion of Linux distros (planned support for Void and more soon)
 
 Its just a fun little project I'm working on. 
 
-This will mostly work on non-debian systems except for the package number. I need to support PM's
 
 # How to use (not installable yet)
 
@@ -11,4 +10,4 @@ This will mostly work on non-debian systems except for the package number. I nee
 
 `cd a-fetch`
 
-`sudo bash a-fetch.sh`
+`bash a-fetch.sh`
