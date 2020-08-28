@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # OS Name
@@ -16,28 +15,23 @@
 #packages
 
 #debian
-	PKGMAN=/etc/debian_version
-	if [ -f "$PKGMAN" ]; then
+	if [ PKGMAN=/etc/debian_version | -f "$PKGMAN" ]; then
 		pkg=$(dpkg --get-selections | wc --lines | sed 's/[[:space:]]//g')
 		echo 'Packages: '$pkg'(dpkg)'
 #arch
-	PKGMAN=/etc/arch-release
-	elif [ -f "$PKGMAN" ]; then
+	elif [ PKGMAN=/etc/arch-release | -f "$PKGMAN" ]; then
 		pkg=$(pacman -Q | wc -l)
 		echo 'Packages: '$pkg'(pacman)'
 #SuSE
-	PKGMAN=/etc/SuSE-release
-	elif [ -f "PKGMAN" ]; then
+	elif [ PKGMAN=/etc/SuSE-release | -f "PKGMAN" ]; then
 		pkg=$(zypper se -s | wc -l)
 		echo 'Packages: '$pkg'(zypper)'
 #gentoo
-	PKGMAN=/etc/gentoo-release
-	elif [ -f "$PKGMAN" ]; then
+	elif [ PKGMAN=/etc/gentoo-release | -f "$PKGMAN" ]; then
 		pkg=$(ls /var/db/pkg/* | wc -l)
 		echo 'Packages: '$pkg'(emerge)'
 #redhat
-	PKGMAN=/etc/redhat-release
-	elif [ -f "$PKGMAN" ]; then
+	elif [ PKGMAN=/etc/redhat-release | -f "$PKGMAN" ]; then
 		pkg=$(yum list installed  | wc -l)
 		echo 'Packages: '$pkg'(yum)'
 	fi
@@ -59,3 +53,4 @@
 	totalmem=$(free -m | awk '/^Mem:/ {print $2}' | sed 's/Gi/GB/g')
 	echo "Memory: "$usedmem"MB / "$totalmem"MB"
 exit 0
+x
