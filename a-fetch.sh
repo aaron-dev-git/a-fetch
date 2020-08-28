@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # OS Name
-system=$(lsb_release -d | awk '{print $2,$3,$4,$5}')
+system=$(cat /etc/os-release | grep PRETTY_NAME | awk -F'"' '$0=$2')
 echo 'OS: '$system
 
 # Kernel Version
