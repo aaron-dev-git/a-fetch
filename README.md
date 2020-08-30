@@ -11,3 +11,5 @@ Its just a fun little project I'm working on.
 `cd a-fetch`
 
 `bash a-fetch.sh`
+
+ arch users may need to install `xorg-xdpyinfo` via pacman for resolution to work
