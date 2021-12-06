@@ -9,7 +9,7 @@ Git, Bash (or bash based shell).
 
 # How to use (not installable as a program, must run as script)
 
-`git clone https://www.github.com/anime-is-real/a-fetch`
+`git clone https://www.github.com/aaron-dev-git/a-fetch`
 
 `cd a-fetch`
 
