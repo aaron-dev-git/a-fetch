@@ -7,7 +7,7 @@ Its just a fun little project I'm working on.
 
 Git, Bash (or bash based shell). 
 
-# How to use (not installable as a program, must run as script)
+# How to use
 
 `git clone https://www.github.com/aaron-dev-git/a-fetch`
 
